@@ -1,47 +1,23 @@
-var camera, scene, renderer;
-var textMesh;
+var canvas = document.getElementById("renderCanvas");
+var engine = new BABYLON.Engine(canvas, true);
 
-init();
-animate();
-
-function init() {
-    camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 10);
-    camera.position.z = 1;
-
-    scene = new THREE.Scene();
-
-    renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
-
-    document.getElementById('render-button').addEventListener('click', renderText);
+var createScene = function() {
+    var scene = new BABYLON.Scene(engine);
+    var camera = new BABYLON.FreeCamera('camera1', new BABYLON.Vector3(0, 5, -10), scene);
+    camera.setTarget(BABYLON.Vector3.Zero());
+    camera.attachControl(canvas, false);
+    var light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(0,1,0), scene);
+    var sphere = BABYLON.Mesh.CreateSphere('sphere1', 16, 2, scene, false, BABYLON.Mesh.FRONTSIDE);
+    sphere.position.y = 1;
+    return scene;
 }
 
-function animate() {
-    requestAnimationFrame(animate);
-    renderer.render(scene, camera);
-}
+var scene = createScene();
 
-function renderText() {
-    var text = document.getElementById('text-input').value;
-    var fontName = document.getElementById('font-select').value;
+engine.runRenderLoop(function() {
+    scene.render();
+});
 
-    var loader = new THREE.FontLoader();
-    loader.load('https://threejs.org/examples/fonts/' + fontName + '_regular.typeface.json', function(font) {
-        var geometry = new THREE.TextGeometry(text, {
-            font: font,
-            size: 0.07, // altezza dell'iniziale di 7 mm
-            height: 0.012, // spessore delle lettere di 1.2 mm
-            curveSegments: 12,
-            bevelEnabled: true,
-            bevelThickness: 0.01,
-            bevelSize: 0.01,
-            bevelOffset: 0,
-            bevelSegments: 5
-        });
-
-        var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        textMesh = new THREE.Mesh(geometry, material);
-        scene.add(textMesh);
-    });
-}
+window.addEventListener('resize', function() {
+    engine.resize();
+});
