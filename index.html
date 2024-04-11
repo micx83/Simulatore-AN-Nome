@@ -1,62 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulatore 3D per Anello</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <title>Simulatore di testo 3D</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+    </style>
 </head>
-<body style="margin: 0; overflow: hidden;">
-    <input type="text" id="nameInput" placeholder="Inserisci il nome">
-    <button onclick="createRing()">Visualizza Anello</button>
-    <div id="sceneContainer"></div>
+<body>
+    <input id="text-input" type="text" placeholder="Inserisci il tuo testo qui">
+    <select id="font-select">
+        <option value="helvetiker">Helvetiker</option>
+        <option value="optimer">Optimer</option>
+        <option value="gentilis">Gentilis</option>
+    </select>
+    <button id="render-button">Renderizza</button>
 
+    <script src="https://threejs.org/build/three.js"></script>
     <script>
-        const sceneContainer = document.getElementById('sceneContainer');
-        let scene, camera, renderer, textMesh;
+        var camera, scene, renderer;
+        var textMesh;
 
-        function createRing() {
-            const name = document.getElementById('nameInput').value;
+        init();
+        animate();
 
-            // Inizializza la scena
+        function init() {
+            camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 10);
+            camera.position.z = 1;
+
             scene = new THREE.Scene();
-            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
             renderer = new THREE.WebGLRenderer({ antialias: true });
             renderer.setSize(window.innerWidth, window.innerHeight);
-            sceneContainer.appendChild(renderer.domElement);
+            document.body.appendChild(renderer.domElement);
 
-            // Crea il testo 3D
-            const loader = new THREE.FontLoader();
-            loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', (font) => {
-                const textGeometry = new THREE.TextGeometry(name, {
-                    font: font,
-                    size: 10,
-                    height: 2,
-                    curveSegments: 12,
-                    bevelEnabled: true,
-                    bevelThickness: 1,
-                    bevelSize: 0.5,
-                    bevelOffset: 0,
-                    bevelSegments: 5
-                });
-
-                const textMaterial = new THREE.MeshBasicMaterial({ color: 0xC0C0C0 }); // Argento
-                textMesh = new THREE.Mesh(textGeometry, textMaterial);
-                scene.add(textMesh);
-
-                // Posiziona la telecamera
-                camera.position.z = 30;
-
-                // Aggiorna la scena
-                animate();
-            });
+            document.getElementById('render-button').addEventListener('click', renderText);
         }
 
         function animate() {
             requestAnimationFrame(animate);
-            textMesh.rotation.x += 0.01;
-            textMesh.rotation.y += 0.01;
             renderer.render(scene, camera);
+        }
+
+        function renderText() {
+            var text = document.getElementById('text-input').value;
+            var fontName = document.getElementById('font-select').value;
+
+            var loader = new THREE.FontLoader();
+            loader.load('https://threejs.org/examples/fonts/' + fontName + '_regular.typeface.json', function(font) {
+                var geometry = new THREE.TextGeometry(text, {
+                    font: font,
+                    size: 0.07, // altezza dell'iniziale di 7 mm
+                    height: 0.012, // spessore delle lettere di 1.2 mm
+                    curveSegments: 12,
+                    bevelEnabled: true,
+                    bevelThickness: 0.01,
+                    bevelSize: 0.01,
+                    bevelOffset: 0,
+                    bevelSegments: 5
+                });
+
+                var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+                textMesh = new THREE.Mesh(geometry, material);
+                scene.add(textMesh);
+            });
         }
     </script>
 </body>
