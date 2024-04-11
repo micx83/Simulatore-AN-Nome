@@ -1,0 +1,11 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>
