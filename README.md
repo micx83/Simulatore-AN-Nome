@@ -1,1 +1,0 @@
-# Simulatore-AN-Nome
