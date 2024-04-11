@@ -1,0 +1,9 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+#text-input, #font-select, #render-button {
+    margin: 10px;
+}
