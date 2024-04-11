@@ -1,15 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Il mio progetto THREE.js</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulatore 3D per Anello</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
-<body>
-    <!-- Inserisci il tuo codice HTML qui -->
+<body style="margin: 0; overflow: hidden;">
+    <input type="text" id="nameInput" placeholder="Inserisci il nome">
+    <button onclick="createRing()">Visualizza Anello</button>
+    <div id="sceneContainer"></div>
 
-    <!-- Includi THREE.js -->
-    <script src="https://threejs.org/build/three.js"></script>
+    <script>
+        const sceneContainer = document.getElementById('sceneContainer');
+        let scene, camera, renderer, textMesh;
 
-    <!-- Includi il tuo codice JavaScript che utilizza THREE.js -->
-    <script src="main.js"></script>
+        function createRing() {
+            const name = document.getElementById('nameInput').value;
+
+            // Inizializza la scena
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            sceneContainer.appendChild(renderer.domElement);
+
+            // Crea il testo 3D
+            const loader = new THREE.FontLoader();
+            loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', (font) => {
+                const textGeometry = new THREE.TextGeometry(name, {
+                    font: font,
+                    size: 10,
+                    height: 2,
+                    curveSegments: 12,
+                    bevelEnabled: true,
+                    bevelThickness: 1,
+                    bevelSize: 0.5,
+                    bevelOffset: 0,
+                    bevelSegments: 5
+                });
+
+                const textMaterial = new THREE.MeshBasicMaterial({ color: 0xC0C0C0 }); // Argento
+                textMesh = new THREE.Mesh(textGeometry, textMaterial);
+                scene.add(textMesh);
+
+                // Posiziona la telecamera
+                camera.position.z = 30;
+
+                // Aggiorna la scena
+                animate();
+            });
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            textMesh.rotation.x += 0.01;
+            textMesh.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+    </script>
 </body>
 </html>
