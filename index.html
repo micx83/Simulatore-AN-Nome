@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Page</title>
+    <title>3D Text Renderer</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="https://cdn.babylonjs.com/babylon.js"></script>
 </head>
 <body>
-    <input id="text-input" type="text" placeholder="Enter your text here">
-    <select id="font-selector">
-        <option value="Arial">Arial</option>
-        <option value="Verdana">Verdana</option>
-        <option value="Courier New">Courier New</option>
-    </select>
-    <button id="render-button">Create Your Ring</button>
+    <div id="input-area">
+        <input type="text" id="text-input" placeholder="Enter text">
+        <select id="font-selector">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Courier New">Courier New</option>
+        </select>
+        <button id="render-button">Avvia render</button>
+    </div>
     <canvas id="renderCanvas"></canvas>
-    <script src="main.js"></script>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
