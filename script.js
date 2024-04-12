@@ -24,6 +24,11 @@ document.getElementById("render-button").addEventListener("click", function() {
         font: font
     };
 
+    // If text3D already exists, dispose of it before creating a new one
+    if (text3D) {
+        text3D.dispose();
+    }
+
     text3D = BABYLON.MeshBuilder.CreateText("text3D", options, scene);
     text3D.position = new BABYLON.Vector3(0, 0, -2);
 
