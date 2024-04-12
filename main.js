@@ -3,13 +3,15 @@ var engine = new BABYLON.Engine(canvas, true);
 
 var createScene = function() {
     var scene = new BABYLON.Scene(engine);
-    var camera = new BABYLON.ArcRotateCamera("Camera", -Math.PI / 2, Math.PI / 2, 2, new BABYLON.Vector3(0,0,0), scene);
-    camera.attachControl(canvas, true);
+    var camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2, 10, new BABYLON.Vector3(0,0,0), scene);
+    camera.attachControl(canvas, false); // Disable user control
     var light = new BABYLON.HemisphericLight('light1', new BABYLON.Vector3(0,1,0), scene);
+    light.intensity = 0.7;
     return scene;
 }
 
 var scene = createScene();
+var text3D;
 
 document.getElementById("render-button").addEventListener("click", function() {
     var text = document.getElementById("text-input").value;
@@ -22,7 +24,8 @@ document.getElementById("render-button").addEventListener("click", function() {
         font: font
     };
 
-    var text3D = BABYLON.MeshBuilder.CreateText("text3D", options, scene);
+    text3D = BABYLON.MeshBuilder.CreateText("text3D", options, scene);
+    text3D.position = new BABYLON.Vector3(0, 0, -2);
 
     var material = new BABYLON.StandardMaterial("textMat", scene);
     material.diffuseColor = new BABYLON.Color3(0.75, 0.75, 0.75); // Silver color
@@ -30,6 +33,9 @@ document.getElementById("render-button").addEventListener("click", function() {
 });
 
 engine.runRenderLoop(function() {
+    if (text3D) {
+        text3D.rotation.y += 0.01; // Rotate the text
+    }
     scene.render();
 });
 
