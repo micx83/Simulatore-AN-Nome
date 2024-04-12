@@ -1,11 +1,21 @@
 @font-face {
-  font-family: 'Font 1';
-  src: url('path/to/font1.ttf') format('truetype');
+  font-family: 'Always';
+  src: url('https://github.com/micx83/Simulatore-AN-Nome/raw/main/KGAlways.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Font 2';
-  src: url('path/to/font2.ttf') format('truetype');
+  font-family: 'Pacifico';
+  src: url('https://github.com/micx83/Simulatore-AN-Nome/raw/main/Pacifico.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Havana';
+  src: url('https://github.com/micx83/Simulatore-AN-Nome/raw/main/Havana-Regular.ttf') format('truetype');
+
+}
+@font-face {
+  font-family: 'Damion';
+  src: url('https://github.com/micx83/Simulatore-AN-Nome/raw/main/Damion.ttf') format('truetype');
 }
 
 /* ... and so on for each font ... */
