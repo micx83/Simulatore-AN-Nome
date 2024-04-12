@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Font 1';
+  src: url('path/to/font1.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Font 2';
+  src: url('path/to/font2.ttf') format('truetype');
+}
+
+/* ... and so on for each font ... */
+
 body {
   font-family: Arial, sans-serif;
 }
@@ -6,12 +18,6 @@ body {
   margin: 10px;
 }
 
-#output-section {
-  height: 300px;
-  width: 100%;
-}
-
-a-scene {
-  height: 100%;
-  width: 100%;
+#output-text {
+  font-size: 2em;
 }
