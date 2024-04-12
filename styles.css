@@ -2,6 +2,16 @@ body {
   font-family: Arial, sans-serif;
 }
 
-#text-input, #font-selector, #render-button {
+#input-section, #output-section {
   margin: 10px;
+}
+
+#output-section {
+  height: 300px;
+  width: 100%;
+}
+
+a-scene {
+  height: 100%;
+  width: 100%;
 }
