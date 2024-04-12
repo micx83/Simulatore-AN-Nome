@@ -2,28 +2,24 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
+    <input type="text" id="text-input" placeholder="Enter text here">
+    <select id="font-selector">
+      <option value="monoid">Monoid</option>
+      <option value="mozillavr">Mozillavr</option>
+      <option value="dejavu">Dejavu</option>
+    </select>
+    <button id="render-button">Create Your Ring</button>
+
     <a-scene background="color: #ECECEC">
       <a-camera position="0 0 10"></a-camera>
       <a-light type="ambient" color="#888"></a-light>
       <a-light type="directional" color="#FFF" position="2 1 5"></a-light>
-      <a-entity id="text3D" position="-1 0 -5"></a-entity>
+      <a-text id="text3D" position="-1 1 -3" value="Hello" color="#C0C0C0"></a-text>
     </a-scene>
 
-    <input type="text" id="text-input" placeholder="Enter text here">
-    <button id="render-button">Render Text</button>
-
-    <script>
-      document.getElementById("render-button").addEventListener("click", function() {
-        var text = document.getElementById("text-input").value;
-
-        var text3D = document.getElementById("text3D");
-        text3D.setAttribute('text', 'value', text);
-        text3D.setAttribute('text', 'color', '#000');
-        text3D.setAttribute('text', 'align', 'center');
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
