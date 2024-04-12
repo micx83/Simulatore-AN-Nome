@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
     <div id="input-section">
       <input type="text" id="text-input" placeholder="Enter text here">
       <select id="font-selector">
-        <option value="monoid">Monoid</option>
-        <option value="mozillavr">Mozillavr</option>
-        <option value="dejavu">Dejavu</option>
+        <option value="font1">Font 1</option>
+        <option value="font2">Font 2</option>
+        <option value="font3">Font 3</option>
+        <option value="font4">Font 4</option>
       </select>
-      <button id="render-button">Create Your Ring</button>
+      <button id="render-button">Render Text</button>
     </div>
 
     <div id="output-section">
-      <a-scene embedded background="color: #ECECEC">
-        <a-camera position="0 0 5"></a-camera>
-        <a-light type="ambient" color="#888"></a-light>
-        <a-light type="directional" color="#FFF" position="2 1 5"></a-light>
-        <a-text id="text3D" position="-1 1 -2" value="Hello" color="#C0C0C0"></a-text>
-      </a-scene>
+      <p id="output-text" style="color: silver;">Hello</p>
     </div>
 
     <script src="script.js"></script>
