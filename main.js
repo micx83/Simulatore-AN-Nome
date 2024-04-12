@@ -14,21 +14,19 @@ var scene = createScene();
 document.getElementById("render-button").addEventListener("click", function() {
     var text = document.getElementById("text-input").value;
     var font = document.getElementById("font-selector").value;
-    var textTexture = new BABYLON.DynamicTexture("dynamic texture", {width:512, height:256}, scene);
-    var textureContext = textTexture.getContext();
-    textureContext.font = "bold 44px " + font;
-    textureContext.fillStyle = "white";
-    textureContext.fillText(text, 50, 50);
-    textTexture.update();
 
-    var points = [];
-    for (var i = 0; i < 10; i++) {
-        points.push(new BABYLON.Vector3(Math.cos(i * Math.PI / 5), Math.sin(i * Math.PI / 5), 0));
-    }
+    var options = {
+        text: text,
+        height: 0.5,
+        size: 1,
+        font: font
+    };
 
-    var ribbon = BABYLON.MeshBuilder.CreateRibbon("ribbon", {pathArray: [points]}, scene);
-    ribbon.material = new BABYLON.StandardMaterial("textMat", scene);
-    ribbon.material.diffuseTexture = textTexture;
+    var text3D = BABYLON.MeshBuilder.CreateText("text3D", options, scene);
+
+    var material = new BABYLON.StandardMaterial("textMat", scene);
+    material.diffuseColor = new BABYLON.Color3(0.75, 0.75, 0.75); // Silver color
+    text3D.material = material;
 });
 
 engine.runRenderLoop(function() {
