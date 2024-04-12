@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>3D Text Renderer</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <div id="input-area">
-        <input type="text" id="text-input" placeholder="Enter text">
-        <select id="font-selector">
-            <option value="Arial">Arial</option>
-            <option value="Verdana">Verdana</option>
-            <option value="Courier New">Courier New</option>
-        </select>
-        <button id="render-button">Avvia render</button>
-    </div>
-    <canvas id="renderCanvas"></canvas>
-    <script src="https://cdn.babylonjs.com/earcut.min.js"></script>
-    <script src="https://cdn.babylonjs.com/babylon.js"></script>
-    <script src="script.js"></script>
-</body>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene background="color: #ECECEC">
+      <a-camera position="0 0 10"></a-camera>
+      <a-light type="ambient" color="#888"></a-light>
+      <a-light type="directional" color="#FFF" position="2 1 5"></a-light>
+      <a-entity id="text3D"></a-entity>
+    </a-scene>
+
+    <input type="text" id="text-input" placeholder="Enter text here">
+    <button id="render-button">Render Text</button>
+
+    <script>
+      document.getElementById("render-button").addEventListener("click", function() {
+        var text = document.getElementById("text-input").value;
+
+        var text3D = document.getElementById("text3D");
+        text3D.setAttribute('text', 'value', text);
+        text3D.setAttribute('text', 'color', '#000');
+        text3D.setAttribute('text', 'align', 'center');
+      });
+    </script>
+  </body>
 </html>
