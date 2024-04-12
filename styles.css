@@ -1,12 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-#input-area {
-    margin-bottom: 10px;
-}
-
-#renderCanvas {
-    width: 100%;
-    height: 600px;
+#text-input, #font-selector, #render-button {
+  margin: 10px;
 }
