@@ -27,6 +27,13 @@ body {
   margin: 10px;
 }
 
+#output-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Optional: This will make the container take up the full height of the viewport */
+}
+
 #output-text {
   font-size: 2em;
 }
