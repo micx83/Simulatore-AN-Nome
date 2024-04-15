@@ -23,15 +23,17 @@ body {
   font-family: Arial, sans-serif;
 }
 
-#input-section, #output-section {
-  margin: 10px;
+#input-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* This will add some space between the input, select, and button */
 }
 
 #output-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Optional: This will make the container take up the full height of the viewport */
 }
 
 #output-text {
