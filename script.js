@@ -1,5 +1,5 @@
 document.getElementById("simulate-button").addEventListener("click", function() {
-  var text = document.getElementById("text-input").value;
+  var text = document.getElementById("input-text").value;
   var outputDiv = document.getElementById("output-text");
 
   // Clear the output div
