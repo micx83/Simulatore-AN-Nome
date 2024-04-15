@@ -39,6 +39,7 @@
   font-size: 15px;
   width: 150px;
   height: 30px;
+  margin:5px
   border: solid 1px;
   background-color: transparent;
 }
@@ -46,7 +47,8 @@
 #simulate-button{
   font-size: 15px;
   width: 80px;
-  height: 30px;
+  height: 30px; /* Adjust this value as needed */
+  margin: 5px;  
   border: solid 1px;
   background-color: transparent;
 }
@@ -69,11 +71,6 @@ body {
   justify-content: center;
 }
 
-#input-text, #simulate-button {
-  height: 40px; /* Adjust this value as needed */
-  margin: 5px;
-}
-
 #output-text div {
   display: flex;
   align-items: center;
@@ -86,4 +83,12 @@ body {
 
 #output-text div:last-child {
   font-size: larger;
+}
+
+#output-text div:first-child {
+  font-size: 14px; /* Adjust this value as needed */
+}
+
+#output-text div:last-child {
+  font-size: 22px; /* Adjust this value as needed */
 }
