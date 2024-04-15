@@ -11,7 +11,7 @@ document.getElementById("simulate-button").addEventListener("click", function() 
     var fontDiv = document.createElement('div');
 
     var fontNameDiv = document.createElement('div');
-    fontNameDiv.textContent = font;
+    fontNameDiv.textContent = font + ': ';
     fontDiv.appendChild(fontNameDiv);
 
     var modifiedText = "";
@@ -34,7 +34,7 @@ document.getElementById("simulate-button").addEventListener("click", function() 
     }
 
     var textDiv = document.createElement('div');
-    textDiv.innerHTML = modifiedText;
+    textDiv.innerHTML = fontNameDiv.outerHTML + modifiedText;
     textDiv.style.fontFamily = font;
     fontDiv.appendChild(textDiv);
 
