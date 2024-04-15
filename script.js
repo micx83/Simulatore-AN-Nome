@@ -14,8 +14,11 @@ document.getElementById("simulate-button").addEventListener("click", function() 
 
     var fontNameDiv = document.createElement('div');
     fontNameDiv.textContent = font + ': ';
+    fontNameDiv.style.marginRight = '10px';
     fontDiv.appendChild(fontNameDiv);
-
+    if (font === 'Havana') {
+  textDiv.style.fontWeight = 'bold'; // Make the font thicker
+}    
     var modifiedText = "";
 
     // Iterate over each character in the input text
@@ -35,9 +38,6 @@ document.getElementById("simulate-button").addEventListener("click", function() 
       }
     }
 
-if (font === 'Havana') {
-  textDiv.style.fontWeight = 'bold'; // Make the font thicker
-}    
     var textDiv = document.createElement('div');
     textDiv.innerHTML = modifiedText;
     textDiv.style.fontFamily = font;
