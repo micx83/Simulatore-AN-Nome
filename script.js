@@ -1,4 +1,4 @@
-document.getElementById("render-button").addEventListener("click", function() {
+document.getElementById("simulate-button").addEventListener("click", function() {
   var text = document.getElementById("text-input").value;
   var outputDiv = document.getElementById("output-text");
 
