@@ -27,11 +27,11 @@
   font-family: 'Pacifico';
 }
 
-#font-selector option[value="Pacifico"] {
+#font-selector option[value="Havana"] {
   font-family: 'Havana';
 }
 
-#font-selector option[value="Pacifico"] {
+#font-selector option[value="Damion"] {
   font-family: 'Damion';
 }
 
