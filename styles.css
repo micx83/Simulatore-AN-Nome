@@ -27,11 +27,11 @@
   font-family: 'Pacifico';
 }
 
-.font-always {
+.font-havana {
   font-family: 'Havana';
 }
 
-.font-pacifico {
+.font-damion {
   font-family: 'Damion';
 }
 
@@ -43,15 +43,7 @@
   background-color: transparent;
 }
 
-#font-selector{
-  font-size: 15px;
-  width: 80px;
-  height: 30px;
-  border: solid 1px;
-  background-color: transparent;
-}
-
-#render-button{
+#simulate-button{
   font-size: 15px;
   width: 80px;
   height: 30px;
