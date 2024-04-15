@@ -62,10 +62,11 @@ body {
   gap: 10px; /* This will add some space between the input, select, and button */
 }
 
-#output-section {
+#output-text {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 #output-text {
