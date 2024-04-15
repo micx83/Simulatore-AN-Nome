@@ -19,7 +19,7 @@
 }
 /* ... and so on for each font ... */
 
-#render-button {
+#text-input, #font-selector, #render-button{
   font-size: 15px;
   width: 200px;
   height: 40px;
