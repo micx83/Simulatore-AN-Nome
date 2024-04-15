@@ -14,7 +14,6 @@ document.getElementById("simulate-button").addEventListener("click", function() 
 
     var fontNameDiv = document.createElement('div');
     fontNameDiv.textContent = font + ': ';
-    fontNameDiv.style.fontSize = 'smaller';
     fontDiv.appendChild(fontNameDiv);
 
     var modifiedText = "";
