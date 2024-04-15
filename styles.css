@@ -19,26 +19,26 @@
 }
 /* ... and so on for each font ... */
 
-#font-selector option[value="Always"] {
-  font-family: 'Always';
-}
-
-#font-selector option[value="Pacifico"] {
-  font-family: 'Pacifico';
-}
-
-#font-selector option[value="Havana"] {
-  font-family: 'Havana';
-}
-
-#font-selector option[value="Damion"] {
-  font-family: 'Damion';
-}
-
-#text-input, #font-selector, #render-button{
+#text-input{
   font-size: 15px;
   width: 200px;
-  height: 40px;
+  height: 30px;
+  border: solid 1px;
+  background-color: transparent;
+}
+
+#font-selector{
+  font-size: 15px;
+  width: 80px;
+  height: 30px;
+  border: solid 1px;
+  background-color: transparent;
+}
+
+#render-button{
+  font-size: 15px;
+  width: 80px;
+  height: 30px;
   border: solid 1px;
   background-color: transparent;
 }
