@@ -27,14 +27,6 @@ body {
   margin: 10px;
 }
 
-#input-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-}
-
 #output-section {
   display: flex;
   justify-content: center;
