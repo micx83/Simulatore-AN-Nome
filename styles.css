@@ -19,6 +19,14 @@
 }
 /* ... and so on for each font ... */
 
+#myButton {
+  font-size: 15px;
+  width: 200px;
+  height: 40px;
+  border: solid 1px;
+  background-color: transparent;
+}
+
 body {
   font-family: Arial, sans-serif;
 }
