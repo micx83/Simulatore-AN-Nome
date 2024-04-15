@@ -16,9 +16,7 @@ document.getElementById("simulate-button").addEventListener("click", function() 
     fontNameDiv.textContent = font + ': ';
     fontNameDiv.style.marginRight = '10px';
     fontDiv.appendChild(fontNameDiv);
-    if (font === 'Havana') {
-  textDiv.style.fontWeight = 'bold'; // Make the font thicker
-}    
+    
     var modifiedText = "";
 
     // Iterate over each character in the input text
@@ -40,7 +38,10 @@ document.getElementById("simulate-button").addEventListener("click", function() 
 
     var textDiv = document.createElement('div');
     textDiv.innerHTML = modifiedText;
-    textDiv.style.fontFamily = font;
+    textDiv.className = 'font-' + font.toLowerCase();
+    if (font === 'Havana') {
+      textDiv.style.fontWeight = 'bold'; // Make the font thicker
+    }
     fontDiv.appendChild(textDiv);
 
     outputDiv.appendChild(fontDiv);
