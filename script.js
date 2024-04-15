@@ -5,7 +5,7 @@ document.getElementById("simulate-button").addEventListener("click", function() 
   // Clear the output div
   outputDiv.innerHTML = '';
 
-  var fonts = ['Always', 'Pacifico', /* other fonts */];
+  var fonts = ['Always', 'Pacifico', 'Havana', 'Damion'/* other fonts */];
 
   fonts.forEach(function(font) {
     var fontDiv = document.createElement('div');
