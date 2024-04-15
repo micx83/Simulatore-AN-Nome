@@ -19,6 +19,22 @@
 }
 /* ... and so on for each font ... */
 
+#font-selector option[value="Always"] {
+  font-family: 'Always';
+}
+
+#font-selector option[value="Pacifico"] {
+  font-family: 'Pacifico';
+}
+
+#font-selector option[value="Pacifico"] {
+  font-family: 'Havana';
+}
+
+#font-selector option[value="Pacifico"] {
+  font-family: 'Damion';
+}
+
 #text-input, #font-selector, #render-button{
   font-size: 15px;
   width: 200px;
