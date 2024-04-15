@@ -69,10 +69,21 @@ body {
   justify-content: center;
 }
 
+#input-text, #simulate-button {
+  height: 40px; /* Adjust this value as needed */
+  margin: 5px;
+}
+
 #output-text div {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#output-text div:first-child {
   font-size: smaller;
 }
 
+#output-text div:last-child {
+  font-size: larger;
+}
