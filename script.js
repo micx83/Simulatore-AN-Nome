@@ -9,9 +9,11 @@ document.getElementById("simulate-button").addEventListener("click", function() 
 
   fonts.forEach(function(font) {
     var fontDiv = document.createElement('div');
+    fontDiv.style.display = 'flex';
+    fontDiv.style.alignItems = 'center';
 
     var fontNameDiv = document.createElement('div');
-    fontNameDiv.textContent = font + ':';
+    fontNameDiv.textContent = font + ': ';
     fontNameDiv.style.fontSize = 'smaller';
     fontDiv.appendChild(fontNameDiv);
 
