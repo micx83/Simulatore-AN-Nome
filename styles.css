@@ -57,13 +57,15 @@ body {
 
 #input-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-#output-text div:first-child {
+#output div:first-child {
   font-size: smaller;
+}
+
   gap: 10px; /* This will add some space between the input, select, and button */
 }
 
