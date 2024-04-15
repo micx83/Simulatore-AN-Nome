@@ -19,9 +19,25 @@
 }
 /* ... and so on for each font ... */
 
+.font-always {
+  font-family: 'Always';
+}
+
+.font-pacifico {
+  font-family: 'Pacifico';
+}
+
+.font-always {
+  font-family: 'Havana';
+}
+
+.font-pacifico {
+  font-family: 'Damion';
+}
+
 #text-input{
   font-size: 15px;
-  width: 200px;
+  width: 150px;
   height: 30px;
   border: solid 1px;
   background-color: transparent;
