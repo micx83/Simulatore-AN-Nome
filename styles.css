@@ -1,23 +1,22 @@
 @font-face {
   font-family: 'Always';
-  src: url('https://static.tumblr.com/9wzbixa/PUwmj3iyh/kgalwaysagoodtime.ttf') format("truetype");
+  src: url('https://cdn.jsdelivr.net/gh/micx83/Simulatore-AN-Nome/kgalwaysagoodtime.ttf') format("truetype");
 }
 
 @font-face {
   font-family: 'Pacifico';
-  src: url('https://github.com/micx83/Simulatore-AN-Nome/raw/main/Pacifico.ttf') format('truetype');
+  src: url('https://cdn.jsdelivr.net/gh/micx83/Simulatore-AN-Nome/Pacifico.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Havana';
-  src: url('https://github.com/micx83/Simulatore-AN-Nome/raw/main/Havana-Regular.ttf') format('truetype');
-
+  src: url('https://cdn.jsdelivr.net/gh/micx83/Simulatore-AN-Nome/Havana-Regular.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'Damion';
-  src: url('https://github.com/micx83/Simulatore-AN-Nome/raw/main/Damion.ttf') format('truetype');
+  src: url('https://cdn.jsdelivr.net/gh/micx83/Simulatore-AN-Nome/Damion.ttf') format('truetype');
 }
-
 /* ... and so on for each font ... */
 
 body {
