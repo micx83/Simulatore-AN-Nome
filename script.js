@@ -10,6 +10,11 @@ document.getElementById("simulate-button").addEventListener("click", function() 
   fonts.forEach(function(font) {
     var fontDiv = document.createElement('div');
 
+    var fontNameDiv = document.createElement('div');
+    fontNameDiv.textContent = font + ':';
+    fontNameDiv.style.fontSize = 'smaller';
+    fontDiv.appendChild(fontNameDiv);
+
     var modifiedText = "";
 
     // Iterate over each character in the input text
