@@ -33,8 +33,8 @@ document.getElementById("simulate-button").addEventListener("click", function() 
         // If the character is "F", "G", "S", "T", "I", or "&" and the selected font is "Always", wrap it in a span with the font for "Pacifico"
         modifiedText += '<span style="font-family: Pacifico;">' + char + '</span>';
       } else if (char === "r" && font === "Damion") {
-        // If the character is "r" and the selected font is "Damion", wrap it in a span with the font for "Lakesigh"
-        modifiedText += '<span style="font-family: Lakesigh;">' + char + '</span>';
+        // If the character is "r" and the selected font is "Damion", wrap it in a span with the font for "Lakesigh" and add the "lakesigh-r" class
+        modifiedText += '<span class="lakesigh-r" style="font-family: Lakesigh;">' + char + '</span>';
       } else {
         // If the character is any other character, just add it to the modified text as is
         modifiedText += char;
