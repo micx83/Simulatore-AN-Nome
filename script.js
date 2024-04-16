@@ -40,7 +40,7 @@ document.getElementById("simulate-button").addEventListener("click", function() 
     textDiv.innerHTML = modifiedText;
     textDiv.className = 'font-' + font.toLowerCase();
     if (font === 'Havana') {
-      textDiv.style.fontWeight = '900';// Make the font thicker
+      textDiv.style.fontWeight = '1000';// Make the font thicker
     }
 
     if (font === 'Damion') {
