@@ -18,6 +18,11 @@
   src: url('https://cdn.jsdelivr.net/gh/micx83/Simulatore-AN-Nome/Damion.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Lakesigh';
+  src: url('https://cdn.jsdelivr.net/gh/micx83/Simulatore-AN-Nome/Lakesigh.ttf') format('truetype');
+}
+
 .font-always {
   font-family: 'Always';
 }
