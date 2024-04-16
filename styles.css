@@ -30,17 +30,18 @@
 
 .font-pacifico {
   font-family: 'Pacifico';
-  font-size: 30px; /* Adjust this value as needed */
+  font-size: 22px; /* Adjust this value as needed */
 }
 
 .font-havana {
   font-family: 'Havana';
-  font-size: 50px; /* Adjust this value as needed */
+  font-size: 60px; /* Adjust this value as needed */
+  font-weight: bold;
 }
 
 .font-damion {
   font-family: 'Damion';
-  font-size: 50px; /* Adjust this value as needed */
+  font-size: 60px; /* Adjust this value as needed */
 }
 
 #input-text{
