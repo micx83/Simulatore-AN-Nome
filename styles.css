@@ -88,3 +88,9 @@ body {
 #output-text div:last-child {
   font-size: 32px;
 }
+
+span.lakesigh-r {
+  position: relative;
+  top: 2px; /* Adjust this value as needed */
+  left: 2px; /* Adjust this value as needed */
+}
