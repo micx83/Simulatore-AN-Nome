@@ -25,30 +25,21 @@
 
 .font-always {
   font-family: 'Always';
+  font-size: 30px; /* Adjust this value as needed */
 }
 
 .font-pacifico {
   font-family: 'Pacifico';
+  font-size: 30px; /* Adjust this value as needed */
 }
 
 .font-havana {
   font-family: 'Havana';
+  font-size: 50px; /* Adjust this value as needed */
 }
 
 .font-damion {
   font-family: 'Damion';
-}
-
-.font-always{
-  font-size: 30px; /* Adjust this value as needed */
-}
-.font-pacifico {
-  font-size: 30px; /* Adjust this value as needed */
-}
-.font-havana{
-  font-size: 50px; /* Adjust this value as needed */
-}
-.font-damion {
   font-size: 50px; /* Adjust this value as needed */
 }
 
