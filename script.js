@@ -4,6 +4,7 @@ document.getElementById("simulate-button").addEventListener("click", function() 
 
   // Clear the output div
   outputDiv.innerHTML = '';
+  outputDiv.style.marginTop = '20px'; // Add top margin to the outputDiv  
   
   var fonts = ['Always', 'Pacifico', 'Havana', 'Damion'/* other fonts */];
 
