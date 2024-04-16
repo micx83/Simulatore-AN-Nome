@@ -39,6 +39,10 @@
   font-family: 'Damion';
 }
 
+.font-always, .font-pacifico, .font-havana, .font-damion {
+  font-size: 30px; /* Adjust this value as needed */
+}
+
 #input-text{
   font-size: 15px;
   width: 150px;
