@@ -11,7 +11,7 @@ document.getElementById("simulate-button").addEventListener("click", function() 
     var fontDiv = document.createElement('div');
     fontDiv.style.display = 'flex';
     fontDiv.style.alignItems = 'center';
-    }
+    fontDiv.style.marginBottom = '10px'; // Add bottom margin to each fontDiv
 
     var fontNameDiv = document.createElement('div');
     fontNameDiv.textContent = font + ': ';
