@@ -13,11 +13,6 @@ document.getElementById("simulate-button").addEventListener("click", function() 
     fontDiv.style.alignItems = 'center';
     }
 
-                // Add bottom margin to all but the last fontDiv
-    if (index < fonts.length - 1) {
-      fontDiv.style.marginBottom = '10px'; // Adjust as needed
-    }
-  
     var fontNameDiv = document.createElement('div');
     fontNameDiv.textContent = font + ': ';
     fontNameDiv.style.marginRight = '10px';
